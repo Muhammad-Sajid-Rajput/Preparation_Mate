@@ -1,0 +1,225 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', sans-serif;
+  @apply bg-surface text-on-surface antialiased;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+  font-size: 20px;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+}
+
+.border-hairline {
+  border-width: 0.5px;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, #E8F0F6 25%, #D6E6F3 50%, #E8F0F6 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite linear;
+}
+
+@keyframes shake {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  20% {
+    transform: translateX(-6px);
+  }
+
+  40% {
+    transform: translateX(6px);
+  }
+
+  60% {
+    transform: translateX(-4px);
+  }
+
+  80% {
+    transform: translateX(4px);
+  }
+}
+
+.shake {
+  animation: shake 0.4s ease;
+}
+
+@keyframes typingBounce {
+
+  0%,
+  60%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.4;
+  }
+
+  30% {
+    transform: translateY(-6px);
+    opacity: 1;
+  }
+}
+
+.typing-dot {
+  animation: typingBounce 1.0s infinite ease-in-out;
+}
+
+/* Premium Animations & Reveals */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  opacity: 0;
+  animation: fadeUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animation-delay-75 {
+  animation-delay: 75ms;
+}
+
+.animation-delay-100 {
+  animation-delay: 100ms;
+}
+
+.animation-delay-150 {
+  animation-delay: 150ms;
+}
+
+.animation-delay-200 {
+  animation-delay: 200ms;
+}
+
+.animation-delay-300 {
+  animation-delay: 300ms;
+}
+
+.animation-delay-250 {
+  animation-delay: 250ms;
+}
+
+.animation-delay-300 {
+  animation-delay: 300ms;
+}
+
+.animation-delay-350 {
+  animation-delay: 350ms;
+}
+
+.animation-delay-400 {
+  animation-delay: 400ms;
+}
+
+
+/* Page Header Strip */
+.pm-page-header {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #D6E6F3;
+  @apply flex items-center justify-between px-6 py-4 mb-6 -mt-6 -mx-6;
+}
+
+/* Section Label — 3px left accent + bold label */
+.pm-section-label {
+  @apply flex items-center gap-2;
+  padding-left: 10px;
+  border-left: 3px solid #0F52BA;
+}
+
+/* Premium Styling Systems (Landing Page Theme Compatibility) */
+/* Premium Styling Systems (Corporate SaaS / Fintech Aesthetic) */
+.premium-card {
+  background: linear-gradient(135deg, rgba(214, 230, 243, 0.4), rgba(255, 255, 255, 0.95));
+  backdrop-filter: blur(16px);
+  border: 1px solid #A6C5D7;
+  @apply rounded-xl p-6 shadow-[0_12px_45px_rgba(15,82,186,0.04)] hover:shadow-[0_20px_50px_rgba(15,82,186,0.08)] hover:-translate-y-1.5 hover:border-primary/40 transition-all duration-300 ease-out;
+}
+
+.premium-btn-primary {
+  @apply bg-primary text-white rounded-lg hover:bg-[#0d47a1] active:scale-[0.98] hover:-translate-y-0.5 hover:shadow-[0_10px_25px_rgba(15,82,186,0.25)] transition-all duration-300 ease-out;
+}
+
+.premium-btn-secondary {
+  @apply bg-primary-fixed/50 hover:bg-primary-fixed text-primary border border-primary-fixed-dim/60 rounded-lg active:scale-[0.98] hover:-translate-y-0.5 transition-all duration-300 ease-out;
+}
+
+.glass-nav {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid #D6E6F3;
+  @apply shadow-sm;
+}
+
+.glass-sidebar {
+  background: linear-gradient(180deg, #000926 0%, #0F52BA 100%);
+  border-right: 1px solid rgba(166, 197, 215, 0.15);
+  @apply shadow-lg;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(120%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutRight {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(120%);
+    opacity: 0;
+  }
+}
+
+.animate-slide-in {
+  animation: slideInRight 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-slide-out {
+  animation: slideOutRight 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
