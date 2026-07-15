@@ -1,5 +1,9 @@
 # 🎓 Preparation Mate — Full-Stack AI-Powered Study Companion
 
+<p align="center">
+  <img src="frontend/public/preparation_mate_banner.webp" alt="Preparation Mate Banner" width="100%" />
+</p>
+
 Preparation Mate is an advanced, high-fidelity AI-powered study companion and career preparation platform. It is engineered to help students, learners, and job seekers streamline their study processes, discover knowledge gaps, schedule study paths, simulate mock interviews, and optimize resumes for ATS scanner systems.
 
 This project is organized as a monorepo containing a **Vite + React frontend** and an **Express + Node.js backend** powered by MongoDB, Google Gemini, and Groq APIs.
